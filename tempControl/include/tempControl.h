@@ -9,7 +9,7 @@ enum class systemInfo{
     TEMP_NOT_REACHED = 3 //temperature not reached in a set time
     
 };
-static systemInfo systemStatus; //to know if system is ok or there is an error
+extern systemInfo systemStatus; //to know if system is ok or there is an error. Global variable defined in .cpp
 
 //Temperature status
 enum class tempInfo{
@@ -17,7 +17,7 @@ enum class tempInfo{
     TEMP_TOO_COLD = 1,
     TEMP_TOO_HOT = 2
 };
-static tempInfo tempStatus; //temperature within limits or under/over
+extern tempInfo tempStatus; //temperature within limits or under/over. Global variable defined in .cpp
 
 
 class Sensor {
@@ -39,8 +39,8 @@ class TempControl {
     int currentTemp; //current temperature
     int minTempSet; //minimum temperature set by user
     int maxTempSet; //maximum temperature set by user
-    int set_time; //time set by user during which temperature should be within min_limit and max_limit
-    int ini_time_ctrl; //time when control starts; used to warn TEMP_NOT_REACHED if time applying control is longer than set_time
+    unsigned int set_time; //time set by user during which temperature should be within min_limit and max_limit
+    unsigned int ini_time_ctrl; //time when control starts; used to warn TEMP_NOT_REACHED if time applying control is longer than set_time
 
     TempControl(Sensor tsensor, int minT, int maxT); //constructor 1
     TempControl(Sensor tsensor, int minT, int maxT, int setTime); //constructor 2
@@ -49,5 +49,5 @@ class TempControl {
     void controlTemp(int rawInput, int curTime = 0); //get current temperature (rawInput ideally got from an interrupt) and, optionally, the current time
     void Cool(); //activate cool mechanism
     void HeatUp(); //activate heat up mechanism
-    void SetTime(int setTime); //define set_time, especially if not defined in constructor 2 or changing its value on the fly
+    void SetTime(unsigned int setTime); //define set_time, especially if not defined in constructor 2 or changing its value on the fly
 } ;

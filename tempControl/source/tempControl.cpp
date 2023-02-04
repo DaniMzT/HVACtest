@@ -2,6 +2,9 @@
 #include <iostream>
 using namespace std;
 
+systemInfo systemStatus = systemInfo::SYSTEM_OK;
+tempInfo tempStatus = tempInfo::TEMP_OK;
+
 //Class Sensor
 Sensor::Sensor(int sens, int min, int max, int off){ //constructor
     sensitivity = sens;
@@ -88,7 +91,7 @@ void TempControl::HeatUp(){ //activate heat up mechanism
     cout << "Heating up" <<endl;
     //Activate real heating mechanism
 } 
-void TempControl::SetTime(int setTime){ //define set_time, especially if not defined in constructor 2 or changing its value on the fly
+void TempControl::SetTime(unsigned int setTime){ //define set_time, especially if not defined in constructor 2 or changing its value on the fly
     set_time = setTime;
 } 
 

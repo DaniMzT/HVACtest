@@ -189,4 +189,4 @@ apps/CMakeFiles/main.dir/main.cpp.o: \
  /usr/include/c++/11/ctime /usr/include/c++/11/bits/parse_numbers.h \
  /usr/include/x86_64-linux-gnu/sys/time.h /usr/include/semaphore.h \
  /usr/include/x86_64-linux-gnu/bits/semaphore.h \
- /home/danimt/Documents/HVAC/HVACtest/tempControl/include/tempControl.h
+ /home/danimt/Documents/HVAC/HVACtest/apps/../tempControl/include/tempControl.h

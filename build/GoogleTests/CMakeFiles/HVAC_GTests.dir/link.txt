@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/HVAC_GTests.dir/HVAC_GTests.cpp.o -o HVAC_GTests  ../tempControl/libtempControl.a ../lib/libgtest_main.a ../lib/libgtest.a 

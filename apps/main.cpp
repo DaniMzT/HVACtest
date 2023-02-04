@@ -1,9 +1,10 @@
 #include <stdio.h>
 #include <thread> //for delays
 #include <chrono> //for defining seconds in delays
-#include "tempControl.h"
+#include "../tempControl/include/tempControl.h"
 
 const int TEMP_SENSOR_SENSITIVITY = 2; //deg/V. I'm working in V instead of mV for the sake of simplicity
+const int TEMP_SENSOR_OFFSET = 1;
 const int TEMP_SENSOR_MIN_V = 0; //V
 const int TEMP_SENSOR_MAX_V = 24; //V
 

@@ -65,17 +65,88 @@ CMAKE_BINARY_DIR = /home/danimt/Documents/HVAC/HVACtest/build
 # The main recursive "all" target.
 all: tempControl/all
 all: apps/all
+all: GoogleTests/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
 preinstall: tempControl/preinstall
 preinstall: apps/preinstall
+preinstall: GoogleTests/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: tempControl/clean
 clean: apps/clean
+clean: GoogleTests/clean
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory GoogleTests
+
+# Recursive "all" directory target.
+GoogleTests/all: GoogleTests/CMakeFiles/HVAC_GTests.dir/all
+GoogleTests/all: _deps/googletest-build/all
+.PHONY : GoogleTests/all
+
+# Recursive "preinstall" directory target.
+GoogleTests/preinstall: _deps/googletest-build/preinstall
+.PHONY : GoogleTests/preinstall
+
+# Recursive "clean" directory target.
+GoogleTests/clean: GoogleTests/CMakeFiles/HVAC_GTests.dir/clean
+GoogleTests/clean: _deps/googletest-build/clean
+.PHONY : GoogleTests/clean
+
+#=============================================================================
+# Directory level rules for directory _deps/googletest-build
+
+# Recursive "all" directory target.
+_deps/googletest-build/all: _deps/googletest-build/googlemock/all
+.PHONY : _deps/googletest-build/all
+
+# Recursive "preinstall" directory target.
+_deps/googletest-build/preinstall: _deps/googletest-build/googlemock/preinstall
+.PHONY : _deps/googletest-build/preinstall
+
+# Recursive "clean" directory target.
+_deps/googletest-build/clean: _deps/googletest-build/googlemock/clean
+.PHONY : _deps/googletest-build/clean
+
+#=============================================================================
+# Directory level rules for directory _deps/googletest-build/googlemock
+
+# Recursive "all" directory target.
+_deps/googletest-build/googlemock/all: _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/all
+_deps/googletest-build/googlemock/all: _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/all
+_deps/googletest-build/googlemock/all: _deps/googletest-build/googletest/all
+.PHONY : _deps/googletest-build/googlemock/all
+
+# Recursive "preinstall" directory target.
+_deps/googletest-build/googlemock/preinstall: _deps/googletest-build/googletest/preinstall
+.PHONY : _deps/googletest-build/googlemock/preinstall
+
+# Recursive "clean" directory target.
+_deps/googletest-build/googlemock/clean: _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/clean
+_deps/googletest-build/googlemock/clean: _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/clean
+_deps/googletest-build/googlemock/clean: _deps/googletest-build/googletest/clean
+.PHONY : _deps/googletest-build/googlemock/clean
+
+#=============================================================================
+# Directory level rules for directory _deps/googletest-build/googletest
+
+# Recursive "all" directory target.
+_deps/googletest-build/googletest/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
+_deps/googletest-build/googletest/all: _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all
+.PHONY : _deps/googletest-build/googletest/all
+
+# Recursive "preinstall" directory target.
+_deps/googletest-build/googletest/preinstall:
+.PHONY : _deps/googletest-build/googletest/preinstall
+
+# Recursive "clean" directory target.
+_deps/googletest-build/googletest/clean: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/clean
+_deps/googletest-build/googletest/clean: _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/clean
+.PHONY : _deps/googletest-build/googletest/clean
 
 #=============================================================================
 # Directory level rules for directory apps
@@ -114,7 +185,7 @@ tempControl/clean: tempControl/CMakeFiles/tempControl.dir/clean
 tempControl/CMakeFiles/tempControl.dir/all:
 	$(MAKE) $(MAKESILENT) -f tempControl/CMakeFiles/tempControl.dir/build.make tempControl/CMakeFiles/tempControl.dir/depend
 	$(MAKE) $(MAKESILENT) -f tempControl/CMakeFiles/tempControl.dir/build.make tempControl/CMakeFiles/tempControl.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/danimt/Documents/HVAC/HVACtest/build/CMakeFiles --progress-num=3,4 "Built target tempControl"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/danimt/Documents/HVAC/HVACtest/build/CMakeFiles --progress-num=13,14 "Built target tempControl"
 .PHONY : tempControl/CMakeFiles/tempControl.dir/all
 
 # Build rule for subdir invocation for target.
@@ -140,7 +211,7 @@ tempControl/CMakeFiles/tempControl.dir/clean:
 apps/CMakeFiles/main.dir/all: tempControl/CMakeFiles/tempControl.dir/all
 	$(MAKE) $(MAKESILENT) -f apps/CMakeFiles/main.dir/build.make apps/CMakeFiles/main.dir/depend
 	$(MAKE) $(MAKESILENT) -f apps/CMakeFiles/main.dir/build.make apps/CMakeFiles/main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/danimt/Documents/HVAC/HVACtest/build/CMakeFiles --progress-num=1,2 "Built target main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/danimt/Documents/HVAC/HVACtest/build/CMakeFiles --progress-num=11,12 "Built target main"
 .PHONY : apps/CMakeFiles/main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -158,6 +229,139 @@ main: apps/CMakeFiles/main.dir/rule
 apps/CMakeFiles/main.dir/clean:
 	$(MAKE) $(MAKESILENT) -f apps/CMakeFiles/main.dir/build.make apps/CMakeFiles/main.dir/clean
 .PHONY : apps/CMakeFiles/main.dir/clean
+
+#=============================================================================
+# Target rules for target GoogleTests/CMakeFiles/HVAC_GTests.dir
+
+# All Build rule for target.
+GoogleTests/CMakeFiles/HVAC_GTests.dir/all: tempControl/CMakeFiles/tempControl.dir/all
+GoogleTests/CMakeFiles/HVAC_GTests.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
+GoogleTests/CMakeFiles/HVAC_GTests.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all
+	$(MAKE) $(MAKESILENT) -f GoogleTests/CMakeFiles/HVAC_GTests.dir/build.make GoogleTests/CMakeFiles/HVAC_GTests.dir/depend
+	$(MAKE) $(MAKESILENT) -f GoogleTests/CMakeFiles/HVAC_GTests.dir/build.make GoogleTests/CMakeFiles/HVAC_GTests.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/danimt/Documents/HVAC/HVACtest/build/CMakeFiles --progress-num=1,2 "Built target HVAC_GTests"
+.PHONY : GoogleTests/CMakeFiles/HVAC_GTests.dir/all
+
+# Build rule for subdir invocation for target.
+GoogleTests/CMakeFiles/HVAC_GTests.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/danimt/Documents/HVAC/HVACtest/build/CMakeFiles 8
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 GoogleTests/CMakeFiles/HVAC_GTests.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/danimt/Documents/HVAC/HVACtest/build/CMakeFiles 0
+.PHONY : GoogleTests/CMakeFiles/HVAC_GTests.dir/rule
+
+# Convenience name for target.
+HVAC_GTests: GoogleTests/CMakeFiles/HVAC_GTests.dir/rule
+.PHONY : HVAC_GTests
+
+# clean rule for target.
+GoogleTests/CMakeFiles/HVAC_GTests.dir/clean:
+	$(MAKE) $(MAKESILENT) -f GoogleTests/CMakeFiles/HVAC_GTests.dir/build.make GoogleTests/CMakeFiles/HVAC_GTests.dir/clean
+.PHONY : GoogleTests/CMakeFiles/HVAC_GTests.dir/clean
+
+#=============================================================================
+# Target rules for target _deps/googletest-build/googlemock/CMakeFiles/gmock.dir
+
+# All Build rule for target.
+_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/depend
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/danimt/Documents/HVAC/HVACtest/build/CMakeFiles --progress-num=3,4 "Built target gmock"
+.PHONY : _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/all
+
+# Build rule for subdir invocation for target.
+_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/danimt/Documents/HVAC/HVACtest/build/CMakeFiles 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/danimt/Documents/HVAC/HVACtest/build/CMakeFiles 0
+.PHONY : _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/rule
+
+# Convenience name for target.
+gmock: _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/rule
+.PHONY : gmock
+
+# clean rule for target.
+_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/clean:
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/clean
+.PHONY : _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/clean
+
+#=============================================================================
+# Target rules for target _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir
+
+# All Build rule for target.
+_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/all: _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/all
+_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/depend
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/danimt/Documents/HVAC/HVACtest/build/CMakeFiles --progress-num=5,6 "Built target gmock_main"
+.PHONY : _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/all
+
+# Build rule for subdir invocation for target.
+_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/danimt/Documents/HVAC/HVACtest/build/CMakeFiles 6
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/danimt/Documents/HVAC/HVACtest/build/CMakeFiles 0
+.PHONY : _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/rule
+
+# Convenience name for target.
+gmock_main: _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/rule
+.PHONY : gmock_main
+
+# clean rule for target.
+_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/clean:
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/clean
+.PHONY : _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/clean
+
+#=============================================================================
+# Target rules for target _deps/googletest-build/googletest/CMakeFiles/gtest.dir
+
+# All Build rule for target.
+_deps/googletest-build/googletest/CMakeFiles/gtest.dir/all:
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest.dir/depend
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/danimt/Documents/HVAC/HVACtest/build/CMakeFiles --progress-num=7,8 "Built target gtest"
+.PHONY : _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
+
+# Build rule for subdir invocation for target.
+_deps/googletest-build/googletest/CMakeFiles/gtest.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/danimt/Documents/HVAC/HVACtest/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/danimt/Documents/HVAC/HVACtest/build/CMakeFiles 0
+.PHONY : _deps/googletest-build/googletest/CMakeFiles/gtest.dir/rule
+
+# Convenience name for target.
+gtest: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/rule
+.PHONY : gtest
+
+# clean rule for target.
+_deps/googletest-build/googletest/CMakeFiles/gtest.dir/clean:
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest.dir/clean
+.PHONY : _deps/googletest-build/googletest/CMakeFiles/gtest.dir/clean
+
+#=============================================================================
+# Target rules for target _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir
+
+# All Build rule for target.
+_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/depend
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/danimt/Documents/HVAC/HVACtest/build/CMakeFiles --progress-num=9,10 "Built target gtest_main"
+.PHONY : _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all
+
+# Build rule for subdir invocation for target.
+_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/danimt/Documents/HVAC/HVACtest/build/CMakeFiles 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/danimt/Documents/HVAC/HVACtest/build/CMakeFiles 0
+.PHONY : _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/rule
+
+# Convenience name for target.
+gtest_main: _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/rule
+.PHONY : gtest_main
+
+# clean rule for target.
+_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/clean:
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/clean
+.PHONY : _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

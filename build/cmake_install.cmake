@@ -46,6 +46,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/danimt/Documents/HVAC/HVACtest/build/tempControl/cmake_install.cmake")
   include("/home/danimt/Documents/HVAC/HVACtest/build/apps/cmake_install.cmake")
+  include("/home/danimt/Documents/HVAC/HVACtest/build/GoogleTests/cmake_install.cmake")
 
 endif()
 

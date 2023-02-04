@@ -1,0 +1,5 @@
+if(EXISTS "/home/danimt/Documents/HVAC/HVACtest/build/GoogleTests/HVAC_GTests[1]_tests.cmake")
+  include("/home/danimt/Documents/HVAC/HVACtest/build/GoogleTests/HVAC_GTests[1]_tests.cmake")
+else()
+  add_test(HVAC_GTests_NOT_BUILT HVAC_GTests_NOT_BUILT)
+endif()
