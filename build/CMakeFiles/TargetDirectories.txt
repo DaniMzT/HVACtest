@@ -1,0 +1,8 @@
+/home/danimt/Documents/HVAC/build/CMakeFiles/edit_cache.dir
+/home/danimt/Documents/HVAC/build/CMakeFiles/rebuild_cache.dir
+/home/danimt/Documents/HVAC/build/tempControl/CMakeFiles/tempControl.dir
+/home/danimt/Documents/HVAC/build/tempControl/CMakeFiles/edit_cache.dir
+/home/danimt/Documents/HVAC/build/tempControl/CMakeFiles/rebuild_cache.dir
+/home/danimt/Documents/HVAC/build/apps/CMakeFiles/main.dir
+/home/danimt/Documents/HVAC/build/apps/CMakeFiles/edit_cache.dir
+/home/danimt/Documents/HVAC/build/apps/CMakeFiles/rebuild_cache.dir
