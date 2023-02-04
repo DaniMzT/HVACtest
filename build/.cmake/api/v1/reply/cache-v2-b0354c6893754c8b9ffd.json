@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/danimt/Documents/HVAC/build"
+			"value" : "/home/danimt/Documents/HVAC/HVACtest/build"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -603,7 +603,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/danimt/Documents/HVAC"
+			"value" : "/home/danimt/Documents/HVAC/HVACtest"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1199,7 +1199,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/danimt/Documents/HVAC/build"
+			"value" : "/home/danimt/Documents/HVAC/HVACtest/build"
 		},
 		{
 			"name" : "HVAC_IS_TOP_LEVEL",
@@ -1223,7 +1223,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/danimt/Documents/HVAC"
+			"value" : "/home/danimt/Documents/HVAC/HVACtest"
 		},
 		{
 			"name" : "main_BINARY_DIR",
@@ -1235,7 +1235,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/danimt/Documents/HVAC/build/apps"
+			"value" : "/home/danimt/Documents/HVAC/HVACtest/build/apps"
 		},
 		{
 			"name" : "main_IS_TOP_LEVEL",
@@ -1259,7 +1259,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/danimt/Documents/HVAC/apps"
+			"value" : "/home/danimt/Documents/HVAC/HVACtest/apps"
 		},
 		{
 			"name" : "tempControl_BINARY_DIR",
@@ -1271,7 +1271,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/danimt/Documents/HVAC/build/tempControl"
+			"value" : "/home/danimt/Documents/HVAC/HVACtest/build/tempControl"
 		},
 		{
 			"name" : "tempControl_IS_TOP_LEVEL",
@@ -1295,7 +1295,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/danimt/Documents/HVAC/tempControl"
+			"value" : "/home/danimt/Documents/HVAC/HVACtest/tempControl"
 		}
 	],
 	"kind" : "cache",

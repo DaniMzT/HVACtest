@@ -1,12 +1,12 @@
 [
 {
-  "directory": "/home/danimt/Documents/HVAC/build/tempControl",
-  "command": "/usr/bin/c++  -I/home/danimt/Documents/HVAC/tempControl/include -g -std=gnu++20 -o CMakeFiles/tempControl.dir/source/tempControl.cpp.o -c /home/danimt/Documents/HVAC/tempControl/source/tempControl.cpp",
-  "file": "/home/danimt/Documents/HVAC/tempControl/source/tempControl.cpp"
+  "directory": "/home/danimt/Documents/HVAC/HVACtest/build/tempControl",
+  "command": "/usr/bin/c++  -I/home/danimt/Documents/HVAC/HVACtest/tempControl/include -g -std=gnu++20 -o CMakeFiles/tempControl.dir/source/tempControl.cpp.o -c /home/danimt/Documents/HVAC/HVACtest/tempControl/source/tempControl.cpp",
+  "file": "/home/danimt/Documents/HVAC/HVACtest/tempControl/source/tempControl.cpp"
 },
 {
-  "directory": "/home/danimt/Documents/HVAC/build/apps",
-  "command": "/usr/bin/c++  -I/home/danimt/Documents/HVAC/tempControl/include -g -std=gnu++20 -o CMakeFiles/main.dir/main.cpp.o -c /home/danimt/Documents/HVAC/apps/main.cpp",
-  "file": "/home/danimt/Documents/HVAC/apps/main.cpp"
+  "directory": "/home/danimt/Documents/HVAC/HVACtest/build/apps",
+  "command": "/usr/bin/c++  -I/home/danimt/Documents/HVAC/HVACtest/tempControl/include -g -std=gnu++20 -o CMakeFiles/main.dir/main.cpp.o -c /home/danimt/Documents/HVAC/HVACtest/apps/main.cpp",
+  "file": "/home/danimt/Documents/HVAC/HVACtest/apps/main.cpp"
 }
 ]

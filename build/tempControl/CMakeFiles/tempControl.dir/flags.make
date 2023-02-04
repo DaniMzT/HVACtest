@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/danimt/Documents/HVAC/tempControl/include
+CXX_INCLUDES = -I/home/danimt/Documents/HVAC/HVACtest/tempControl/include
 
 CXX_FLAGS = -g -std=gnu++20
 

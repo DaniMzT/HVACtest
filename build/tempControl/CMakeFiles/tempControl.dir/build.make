@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/danimt/Documents/HVAC
+CMAKE_SOURCE_DIR = /home/danimt/Documents/HVAC/HVACtest
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/danimt/Documents/HVAC/build
+CMAKE_BINARY_DIR = /home/danimt/Documents/HVAC/HVACtest/build
 
 # Include any dependencies generated for this target.
 include tempControl/CMakeFiles/tempControl.dir/depend.make
@@ -72,16 +72,16 @@ include tempControl/CMakeFiles/tempControl.dir/flags.make
 tempControl/CMakeFiles/tempControl.dir/source/tempControl.cpp.o: tempControl/CMakeFiles/tempControl.dir/flags.make
 tempControl/CMakeFiles/tempControl.dir/source/tempControl.cpp.o: ../tempControl/source/tempControl.cpp
 tempControl/CMakeFiles/tempControl.dir/source/tempControl.cpp.o: tempControl/CMakeFiles/tempControl.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danimt/Documents/HVAC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object tempControl/CMakeFiles/tempControl.dir/source/tempControl.cpp.o"
-	cd /home/danimt/Documents/HVAC/build/tempControl && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT tempControl/CMakeFiles/tempControl.dir/source/tempControl.cpp.o -MF CMakeFiles/tempControl.dir/source/tempControl.cpp.o.d -o CMakeFiles/tempControl.dir/source/tempControl.cpp.o -c /home/danimt/Documents/HVAC/tempControl/source/tempControl.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danimt/Documents/HVAC/HVACtest/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object tempControl/CMakeFiles/tempControl.dir/source/tempControl.cpp.o"
+	cd /home/danimt/Documents/HVAC/HVACtest/build/tempControl && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT tempControl/CMakeFiles/tempControl.dir/source/tempControl.cpp.o -MF CMakeFiles/tempControl.dir/source/tempControl.cpp.o.d -o CMakeFiles/tempControl.dir/source/tempControl.cpp.o -c /home/danimt/Documents/HVAC/HVACtest/tempControl/source/tempControl.cpp
 
 tempControl/CMakeFiles/tempControl.dir/source/tempControl.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tempControl.dir/source/tempControl.cpp.i"
-	cd /home/danimt/Documents/HVAC/build/tempControl && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/danimt/Documents/HVAC/tempControl/source/tempControl.cpp > CMakeFiles/tempControl.dir/source/tempControl.cpp.i
+	cd /home/danimt/Documents/HVAC/HVACtest/build/tempControl && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/danimt/Documents/HVAC/HVACtest/tempControl/source/tempControl.cpp > CMakeFiles/tempControl.dir/source/tempControl.cpp.i
 
 tempControl/CMakeFiles/tempControl.dir/source/tempControl.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tempControl.dir/source/tempControl.cpp.s"
-	cd /home/danimt/Documents/HVAC/build/tempControl && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/danimt/Documents/HVAC/tempControl/source/tempControl.cpp -o CMakeFiles/tempControl.dir/source/tempControl.cpp.s
+	cd /home/danimt/Documents/HVAC/HVACtest/build/tempControl && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/danimt/Documents/HVAC/HVACtest/tempControl/source/tempControl.cpp -o CMakeFiles/tempControl.dir/source/tempControl.cpp.s
 
 # Object files for target tempControl
 tempControl_OBJECTS = \
@@ -93,19 +93,19 @@ tempControl_EXTERNAL_OBJECTS =
 tempControl/libtempControl.a: tempControl/CMakeFiles/tempControl.dir/source/tempControl.cpp.o
 tempControl/libtempControl.a: tempControl/CMakeFiles/tempControl.dir/build.make
 tempControl/libtempControl.a: tempControl/CMakeFiles/tempControl.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/danimt/Documents/HVAC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libtempControl.a"
-	cd /home/danimt/Documents/HVAC/build/tempControl && $(CMAKE_COMMAND) -P CMakeFiles/tempControl.dir/cmake_clean_target.cmake
-	cd /home/danimt/Documents/HVAC/build/tempControl && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/tempControl.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/danimt/Documents/HVAC/HVACtest/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libtempControl.a"
+	cd /home/danimt/Documents/HVAC/HVACtest/build/tempControl && $(CMAKE_COMMAND) -P CMakeFiles/tempControl.dir/cmake_clean_target.cmake
+	cd /home/danimt/Documents/HVAC/HVACtest/build/tempControl && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/tempControl.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 tempControl/CMakeFiles/tempControl.dir/build: tempControl/libtempControl.a
 .PHONY : tempControl/CMakeFiles/tempControl.dir/build
 
 tempControl/CMakeFiles/tempControl.dir/clean:
-	cd /home/danimt/Documents/HVAC/build/tempControl && $(CMAKE_COMMAND) -P CMakeFiles/tempControl.dir/cmake_clean.cmake
+	cd /home/danimt/Documents/HVAC/HVACtest/build/tempControl && $(CMAKE_COMMAND) -P CMakeFiles/tempControl.dir/cmake_clean.cmake
 .PHONY : tempControl/CMakeFiles/tempControl.dir/clean
 
 tempControl/CMakeFiles/tempControl.dir/depend:
-	cd /home/danimt/Documents/HVAC/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/danimt/Documents/HVAC /home/danimt/Documents/HVAC/tempControl /home/danimt/Documents/HVAC/build /home/danimt/Documents/HVAC/build/tempControl /home/danimt/Documents/HVAC/build/tempControl/CMakeFiles/tempControl.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/danimt/Documents/HVAC/HVACtest/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/danimt/Documents/HVAC/HVACtest /home/danimt/Documents/HVAC/HVACtest/tempControl /home/danimt/Documents/HVAC/HVACtest/build /home/danimt/Documents/HVAC/HVACtest/build/tempControl /home/danimt/Documents/HVAC/HVACtest/build/tempControl/CMakeFiles/tempControl.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : tempControl/CMakeFiles/tempControl.dir/depend
 

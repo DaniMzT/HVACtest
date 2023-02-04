@@ -95,14 +95,14 @@
 				{
 					"directoryIndex" : 2,
 					"id" : "main::@9e189ee61a034fc9b705",
-					"jsonFile" : "target-main-Debug-55004d0e19151b54e1d7.json",
+					"jsonFile" : "target-main-Debug-7411a61170e9c8d0e8f3.json",
 					"name" : "main",
 					"projectIndex" : 2
 				},
 				{
 					"directoryIndex" : 1,
 					"id" : "tempControl::@505461dbb21fac5802f8",
-					"jsonFile" : "target-tempControl-Debug-af5cc455b24fec806b94.json",
+					"jsonFile" : "target-tempControl-Debug-f0255771dc97570018ec.json",
 					"name" : "tempControl",
 					"projectIndex" : 1
 				}
@@ -112,8 +112,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/danimt/Documents/HVAC/build",
-		"source" : "/home/danimt/Documents/HVAC"
+		"build" : "/home/danimt/Documents/HVAC/HVACtest/build",
+		"source" : "/home/danimt/Documents/HVAC/HVACtest"
 	},
 	"version" : 
 	{

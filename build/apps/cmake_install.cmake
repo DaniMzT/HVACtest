@@ -1,4 +1,4 @@
-# Install script for directory: /home/danimt/Documents/HVAC/apps
+# Install script for directory: /home/danimt/Documents/HVAC/HVACtest/apps
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

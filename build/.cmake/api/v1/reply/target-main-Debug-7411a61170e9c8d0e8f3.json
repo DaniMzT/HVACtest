@@ -1,9 +1,8 @@
 {
-	"archive" : {},
 	"artifacts" : 
 	[
 		{
-			"path" : "tempControl/libtempControl.a"
+			"path" : "apps/main"
 		}
 	],
 	"backtrace" : 1,
@@ -11,13 +10,13 @@
 	{
 		"commands" : 
 		[
-			"add_library",
-			"target_include_directories",
+			"add_executable",
+			"target_link_libraries",
 			"target_compile_features"
 		],
 		"files" : 
 		[
-			"tempControl/CMakeLists.txt"
+			"apps/CMakeLists.txt"
 		],
 		"nodes" : 
 		[
@@ -60,7 +59,7 @@
 			[
 				{
 					"backtrace" : 2,
-					"path" : "/home/danimt/Documents/HVAC/tempControl/include"
+					"path" : "/home/danimt/Documents/HVAC/HVACtest/tempControl/include"
 				}
 			],
 			"language" : "CXX",
@@ -78,13 +77,40 @@
 			]
 		}
 	],
-	"id" : "tempControl::@505461dbb21fac5802f8",
-	"name" : "tempControl",
-	"nameOnDisk" : "libtempControl.a",
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "tempControl::@505461dbb21fac5802f8"
+		}
+	],
+	"id" : "main::@9e189ee61a034fc9b705",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "-g",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "../tempControl/libtempControl.a",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "main",
+	"nameOnDisk" : "main",
 	"paths" : 
 	{
-		"build" : "tempControl",
-		"source" : "tempControl"
+		"build" : "apps",
+		"source" : "apps"
 	},
 	"sourceGroups" : 
 	[
@@ -101,9 +127,9 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "tempControl/source/tempControl.cpp",
+			"path" : "apps/main.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],
-	"type" : "STATIC_LIBRARY"
+	"type" : "EXECUTABLE"
 }

@@ -1,7 +1,7 @@
 tempControl/CMakeFiles/tempControl.dir/source/tempControl.cpp.o: \
- /home/danimt/Documents/HVAC/tempControl/source/tempControl.cpp \
+ /home/danimt/Documents/HVAC/HVACtest/tempControl/source/tempControl.cpp \
  /usr/include/stdc-predef.h \
- /home/danimt/Documents/HVAC/tempControl/include/tempControl.h \
+ /home/danimt/Documents/HVAC/HVACtest/tempControl/include/tempControl.h \
  /usr/include/c++/11/iostream \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \

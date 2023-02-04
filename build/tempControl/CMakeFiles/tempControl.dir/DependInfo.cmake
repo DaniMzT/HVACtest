@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/danimt/Documents/HVAC/tempControl/source/tempControl.cpp" "tempControl/CMakeFiles/tempControl.dir/source/tempControl.cpp.o" "gcc" "tempControl/CMakeFiles/tempControl.dir/source/tempControl.cpp.o.d"
+  "/home/danimt/Documents/HVAC/HVACtest/tempControl/source/tempControl.cpp" "tempControl/CMakeFiles/tempControl.dir/source/tempControl.cpp.o" "gcc" "tempControl/CMakeFiles/tempControl.dir/source/tempControl.cpp.o.d"
   )
 
 # Targets to which this target links.

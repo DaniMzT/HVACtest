@@ -1,18 +1,24 @@
 #pragma once
 
 //system status
-static unsigned int systemStatus; //to know if system is ok or there is an error
 //definition of errors (it could be done with enum, too) for system status
-const unsigned int SYSTEM_OK = 0; //system ok
-const unsigned int ERROR_UNDER_MIN = 1; //current sensor value under minimum threshold
-const unsigned int ERROR_OVER_MAX = 2; //current sensor value ove rmaximum threshold
-const unsigned int TEMP_NOT_REACHED = 3; //temperature not reached in a set time
+enum class systemInfo{
+    SYSTEM_OK = 0, //system ok
+    ERROR_UNDER_MIN = 1, //current sensor value under minimum threshold
+    ERROR_OVER_MAX = 2, //current sensor value ove rmaximum threshold
+    TEMP_NOT_REACHED = 3 //temperature not reached in a set time
+    
+};
+static systemInfo systemStatus; //to know if system is ok or there is an error
 
 //Temperature status
-static int tempStatus; //temperature within limits or under/over
-const unsigned int TEMP_OK = 0;
-const unsigned int TEMP_TOO_COLD = 1;
-const unsigned int TEMP_TOO_HOT = 2;
+enum class tempInfo{
+    TEMP_OK = 0,
+    TEMP_TOO_COLD = 1,
+    TEMP_TOO_HOT = 2
+};
+static tempInfo tempStatus; //temperature within limits or under/over
+
 
 class Sensor {
     public:

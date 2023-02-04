@@ -35,47 +35,47 @@ void TempControl::controlTemp(int rawInput, int curTime) {
     cout << "Temperature:" << currentTemp <<endl;
     //Sensor ok?
     if (rawInput < tempSensor.min_limit){
-        systemStatus = ERROR_UNDER_MIN;
+        systemStatus = systemInfo::ERROR_UNDER_MIN;
         cout << "Sensor value under limit" <<endl;
     }
     else if (rawInput > tempSensor.max_limit){
-        systemStatus = ERROR_OVER_MAX;
+        systemStatus = systemInfo::ERROR_OVER_MAX;
         cout << "Sensor value over limit" <<endl;
     }
     else{
-        systemStatus = SYSTEM_OK;
+        systemStatus = systemInfo::SYSTEM_OK;
     }
     //Temperature ok? if not, Cool() or HeatUp()
     if (currentTemp < minTempSet){
-        if (tempStatus == TEMP_OK) { //if previous temperature read had been ok, this is the beginning of a new temperature control
+        if (tempStatus == tempInfo::TEMP_OK) { //if previous temperature read had been ok, this is the beginning of a new temperature control
             ini_time_ctrl = curTime;
         }
         else{ //previous temperature already out of set limits
             if ((curTime - ini_time_ctrl) > set_time) {
-                systemStatus = TEMP_NOT_REACHED;
+                systemStatus = systemInfo::TEMP_NOT_REACHED;
                 cout << "Temperature has been out of the set limits too long" <<endl;
             }
         }
-        tempStatus = TEMP_TOO_COLD;
+        tempStatus = tempInfo::TEMP_TOO_COLD;
         cout << "Temperature too cold" <<endl;
         HeatUp();
     }
     else if (currentTemp > maxTempSet){
-        tempStatus = TEMP_TOO_HOT;
-        if (tempStatus == TEMP_OK) { //if previous temperature read had been ok, this is the beginning of a new temperature control
+        if (tempStatus == tempInfo::TEMP_OK) { //if previous temperature read had been ok, this is the beginning of a new temperature control
             ini_time_ctrl = curTime;
         }
         else{ //previous temperature already out of set limits
             if ((curTime - ini_time_ctrl) > set_time) {
-                systemStatus = TEMP_NOT_REACHED;
+                systemStatus = systemInfo::TEMP_NOT_REACHED;
                 cout << "Temperature has been out of the set limits too long" <<endl;
             }
         }
+        tempStatus = tempInfo::TEMP_TOO_HOT;
         cout << "Temperature too hot" <<endl;
         Cool();
     }
     else{
-        tempStatus = TEMP_OK;
+        tempStatus = tempInfo::TEMP_OK;
         cout << "Temperature is OK" <<endl;
     }
 
